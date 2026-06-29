@@ -1,0 +1,265 @@
+{
+  "generated_at": "2026-06-29 12:07:22",
+  "insights": [
+    {
+      "title": "Gender Distribution",
+      "insight": "The workforce is predominantly male with 40.0% female employees. Gender diversity varies by department and should be monitored for equitable retention policies.",
+      "chart": "gender_distribution.png"
+    },
+    {
+      "title": "Department Distribution",
+      "insight": "Research & Development employs the largest share (961 employees). Research & Development leads headcount. HR should tailor retention strategies by department workload and growth.",
+      "chart": "department_distribution.png"
+    },
+    {
+      "title": "Job Role Distribution",
+      "insight": "Sales Executive and Research Scientist are the most common roles. High-volume roles warrant targeted career development programs to reduce turnover.",
+      "chart": "job_role_distribution.png"
+    },
+    {
+      "title": "Age Distribution",
+      "insight": "Average employee age is 36.9 years with most employees between 30-45. Mid-career professionals represent the core workforce and key retention focus.",
+      "chart": "age_distribution.png"
+    },
+    {
+      "title": "Education Distribution",
+      "insight": "Bachelor's degree holders form the largest educated segment. Higher education correlates with specific roles in R&D and influences compensation expectations.",
+      "chart": "education_distribution.png"
+    },
+    {
+      "title": "Business Travel",
+      "insight": "Most employees (1043) travel rarely. Frequent travelers face higher burnout risk \u2014 a known attrition driver.",
+      "chart": "business_travel.png"
+    },
+    {
+      "title": "Marital Status",
+      "insight": "Married employees represent the largest group. Work-life balance policies significantly impact this demographic's retention decisions.",
+      "chart": "marital_status.png"
+    },
+    {
+      "title": "Monthly Income",
+      "insight": "Income ranges from $1,009 to $19,999 with median $4,919. Compensation equity reviews recommended for outlier roles.",
+      "chart": "monthly_income.png"
+    },
+    {
+      "title": "Years at Company",
+      "insight": "Many employees have fewer than 5 years tenure, indicating either growth hiring or early attrition. First 3 years are critical for retention investment.",
+      "chart": "years_at_company.png"
+    },
+    {
+      "title": "Performance Rating",
+      "insight": "0.0% of employees report low performancerating (\u22642). Addressing satisfaction gaps can directly reduce attrition risk.",
+      "chart": "performance_rating.png"
+    },
+    {
+      "title": "Work Life Balance",
+      "insight": "28.8% of employees report low worklifebalance (\u22642). Addressing satisfaction gaps can directly reduce attrition risk.",
+      "chart": "work_life_balance.png"
+    },
+    {
+      "title": "Environment Satisfaction",
+      "insight": "38.8% of employees report low environment satisfaction (\u22642). Addressing satisfaction gaps can directly reduce attrition risk.",
+      "chart": "environment_satisfaction.png"
+    },
+    {
+      "title": "Relationship Satisfaction",
+      "insight": "39.4% of employees report low relationship satisfaction (\u22642). Addressing satisfaction gaps can directly reduce attrition risk.",
+      "chart": "relationship_satisfaction.png"
+    },
+    {
+      "title": "Job Satisfaction",
+      "insight": "38.7% of employees report low job satisfaction (\u22642). Addressing satisfaction gaps can directly reduce attrition risk.",
+      "chart": "job_satisfaction.png"
+    },
+    {
+      "title": "Overtime",
+      "insight": "28.3% of employees work overtime \u2014 one of the strongest predictors of attrition. Workload management initiatives should prioritize overtime reduction.",
+      "chart": "overtime.png"
+    },
+    {
+      "title": "Department vs Attrition",
+      "insight": "Highest attrition in 'Sales' at 20.6%. Targeted interventions recommended.",
+      "chart": "department_attrition.png"
+    },
+    {
+      "title": "Job Role vs Attrition",
+      "insight": "Highest attrition in 'Sales Representative' at 39.8%. Targeted interventions recommended.",
+      "chart": "job_role_attrition.png"
+    },
+    {
+      "title": "Education vs Attrition",
+      "insight": "Highest attrition in '1' at 18.2%. Targeted interventions recommended.",
+      "chart": "education_attrition.png"
+    },
+    {
+      "title": "Age Group vs Attrition",
+      "insight": "Highest attrition in '18-25' at 35.8%. Targeted interventions recommended.",
+      "chart": "age_group_attrition.png"
+    },
+    {
+      "title": "Salary Category vs Attrition",
+      "insight": "Highest attrition in 'Low' at 29.3%. Targeted interventions recommended.",
+      "chart": "salary_attrition.png"
+    },
+    {
+      "title": "Correlation Matrix",
+      "insight": "Monthly Income correlates with Job Level and Total Working Years. Satisfaction metrics show inter-correlation, supporting composite satisfaction scoring.",
+      "chart": "correlation_matrix.png"
+    },
+    {
+      "title": "Department \u00d7 Overtime Heatmap",
+      "insight": "Sales employees with overtime show elevated attrition rates. Cross-dimensional analysis reveals high-risk workforce segments.",
+      "chart": "heatmap_department_overtime.png"
+    },
+    {
+      "title": "Feature Importance",
+      "insight": "Top attrition drivers include OverTime, MonthlyIncome, and Attrition. HR should prioritize these factors in retention strategy.",
+      "chart": "feature_importance.png"
+    }
+  ],
+  "chart_data": {
+    "gender": {
+      "Male": 882,
+      "Female": 588
+    },
+    "department": {
+      "Research & Development": 961,
+      "Sales": 446,
+      "Human Resources": 63
+    },
+    "jobRole": {
+      "Sales Executive": 326,
+      "Research Scientist": 292,
+      "Laboratory Technician": 259,
+      "Manufacturing Director": 145,
+      "Healthcare Representative": 131,
+      "Manager": 102,
+      "Sales Representative": 83,
+      "Research Director": 80,
+      "Human Resources": 52
+    },
+    "ageGroups": {
+      "26-35": 606,
+      "36-45": 468,
+      "46-55": 226,
+      "18-25": 123,
+      "55+": 47
+    },
+    "education": {
+      "Bachelor": 572,
+      "Master": 398,
+      "College": 282,
+      "Below College": 170,
+      "Doctor": 48
+    },
+    "businessTravel": {
+      "Travel_Rarely": 1043,
+      "Travel_Frequently": 277,
+      "Non-Travel": 150
+    },
+    "maritalStatus": {
+      "Married": 673,
+      "Single": 470,
+      "Divorced": 327
+    },
+    "overTime": {
+      "No": 1054,
+      "Yes": 416
+    },
+    "performanceRating": {
+      "3": 1244,
+      "4": 226
+    },
+    "workLifeBalance": {
+      "3": 893,
+      "2": 344,
+      "4": 153,
+      "1": 80
+    },
+    "environmentSatisfaction": {
+      "3": 453,
+      "4": 446,
+      "2": 287,
+      "1": 284
+    },
+    "relationshipSatisfaction": {
+      "3": 459,
+      "4": 432,
+      "2": 303,
+      "1": 276
+    },
+    "jobSatisfaction": {
+      "4": 459,
+      "3": 442,
+      "1": 289,
+      "2": 280
+    },
+    "departmentAttrition": {
+      "Human Resources": 19.05,
+      "Research & Development": 13.84,
+      "Sales": 20.63
+    },
+    "jobRoleAttrition": {
+      "Healthcare Representative": 6.87,
+      "Human Resources": 23.08,
+      "Laboratory Technician": 23.94,
+      "Manager": 4.9,
+      "Manufacturing Director": 6.9,
+      "Research Director": 2.5,
+      "Research Scientist": 16.1,
+      "Sales Executive": 17.48,
+      "Sales Representative": 39.76
+    },
+    "educationAttrition": {
+      "1": 18.24,
+      "2": 15.6,
+      "3": 17.31,
+      "4": 14.57,
+      "5": 10.42
+    },
+    "ageGroupAttrition": {
+      "18-25": 35.77,
+      "26-35": 19.14,
+      "36-45": 9.19,
+      "46-55": 11.5,
+      "55+": 17.02
+    },
+    "salaryBins": {
+      "(990.01, 4807.0]": 714,
+      "(4807.0, 8605.0]": 399,
+      "(8605.0, 12403.0]": 166,
+      "(16201.0, 19999.0]": 121,
+      "(12403.0, 16201.0]": 70
+    },
+    "yearsAtCompany": {
+      "5": 196,
+      "1": 171,
+      "3": 128,
+      "2": 127,
+      "10": 120,
+      "4": 110,
+      "7": 90,
+      "9": 82,
+      "8": 80,
+      "6": 76,
+      "0": 44,
+      "11": 32,
+      "20": 27,
+      "13": 24,
+      "15": 20
+    },
+    "monthlyIncomeAvg": 6502.93,
+    "distanceFromHome": {
+      "2": 211,
+      "1": 208,
+      "10": 86,
+      "9": 85,
+      "3": 84,
+      "7": 84,
+      "8": 80,
+      "5": 65,
+      "4": 64,
+      "6": 59
+    }
+  }
+}
