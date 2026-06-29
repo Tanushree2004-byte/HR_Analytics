@@ -1,0 +1,191 @@
+{
+  "generated_at": "2026-06-29 12:07:10",
+  "total_employees": 1470,
+  "attrition_count": 237,
+  "attrition_rate": 16.12,
+  "avg_age": 36.9,
+  "avg_monthly_income": 6502.93,
+  "avg_experience": 11.3,
+  "avg_satisfaction": 2.73,
+  "departments": {
+    "Research & Development": 961,
+    "Sales": 446,
+    "Human Resources": 63
+  },
+  "gender_distribution": {
+    "Male": 882,
+    "Female": 588
+  },
+  "missing_values_handled": {},
+  "duplicates_removed": 0,
+  "outliers": {
+    "Age": {
+      "count": 0,
+      "percentage": 0.0,
+      "lower_bound": 10.5,
+      "upper_bound": 62.5
+    },
+    "DailyRate": {
+      "count": 0,
+      "percentage": 0.0,
+      "lower_bound": -573.0,
+      "upper_bound": 2195.0
+    },
+    "DistanceFromHome": {
+      "count": 0,
+      "percentage": 0.0,
+      "lower_bound": -16.0,
+      "upper_bound": 32.0
+    },
+    "Education": {
+      "count": 0,
+      "percentage": 0.0,
+      "lower_bound": -1.0,
+      "upper_bound": 7.0
+    },
+    "EmployeeCount": {
+      "count": 0,
+      "percentage": 0.0,
+      "lower_bound": 1.0,
+      "upper_bound": 1.0
+    },
+    "EmployeeNumber": {
+      "count": 0,
+      "percentage": 0.0,
+      "lower_bound": -1105.5,
+      "upper_bound": 3152.5
+    },
+    "EnvironmentSatisfaction": {
+      "count": 0,
+      "percentage": 0.0,
+      "lower_bound": -1.0,
+      "upper_bound": 7.0
+    },
+    "HourlyRate": {
+      "count": 0,
+      "percentage": 0.0,
+      "lower_bound": -5.62,
+      "upper_bound": 137.38
+    },
+    "JobInvolvement": {
+      "count": 0,
+      "percentage": 0.0,
+      "lower_bound": 0.5,
+      "upper_bound": 4.5
+    },
+    "JobLevel": {
+      "count": 0,
+      "percentage": 0.0,
+      "lower_bound": -2.0,
+      "upper_bound": 6.0
+    },
+    "JobSatisfaction": {
+      "count": 0,
+      "percentage": 0.0,
+      "lower_bound": -1.0,
+      "upper_bound": 7.0
+    },
+    "MonthlyIncome": {
+      "count": 114,
+      "percentage": 7.76,
+      "lower_bound": -5291.0,
+      "upper_bound": 16581.0
+    },
+    "MonthlyRate": {
+      "count": 0,
+      "percentage": 0.0,
+      "lower_bound": -10574.75,
+      "upper_bound": 39083.25
+    },
+    "NumCompaniesWorked": {
+      "count": 52,
+      "percentage": 3.54,
+      "lower_bound": -3.5,
+      "upper_bound": 8.5
+    },
+    "PercentSalaryHike": {
+      "count": 0,
+      "percentage": 0.0,
+      "lower_bound": 3.0,
+      "upper_bound": 27.0
+    },
+    "PerformanceRating": {
+      "count": 226,
+      "percentage": 15.37,
+      "lower_bound": 3.0,
+      "upper_bound": 3.0
+    },
+    "RelationshipSatisfaction": {
+      "count": 0,
+      "percentage": 0.0,
+      "lower_bound": -1.0,
+      "upper_bound": 7.0
+    },
+    "StandardHours": {
+      "count": 0,
+      "percentage": 0.0,
+      "lower_bound": 80.0,
+      "upper_bound": 80.0
+    },
+    "StockOptionLevel": {
+      "count": 85,
+      "percentage": 5.78,
+      "lower_bound": -1.5,
+      "upper_bound": 2.5
+    },
+    "TotalWorkingYears": {
+      "count": 63,
+      "percentage": 4.29,
+      "lower_bound": -7.5,
+      "upper_bound": 28.5
+    },
+    "TrainingTimesLastYear": {
+      "count": 238,
+      "percentage": 16.19,
+      "lower_bound": 0.5,
+      "upper_bound": 4.5
+    },
+    "WorkLifeBalance": {
+      "count": 0,
+      "percentage": 0.0,
+      "lower_bound": 0.5,
+      "upper_bound": 4.5
+    },
+    "YearsAtCompany": {
+      "count": 104,
+      "percentage": 7.07,
+      "lower_bound": -6.0,
+      "upper_bound": 18.0
+    },
+    "YearsInCurrentRole": {
+      "count": 21,
+      "percentage": 1.43,
+      "lower_bound": -5.5,
+      "upper_bound": 14.5
+    },
+    "YearsSinceLastPromotion": {
+      "count": 107,
+      "percentage": 7.28,
+      "lower_bound": -4.5,
+      "upper_bound": 7.5
+    },
+    "YearsWithCurrManager": {
+      "count": 14,
+      "percentage": 0.95,
+      "lower_bound": -5.5,
+      "upper_bound": 14.5
+    }
+  },
+  "encoders_applied": [
+    "BusinessTravel",
+    "Department",
+    "EducationField",
+    "Gender",
+    "JobRole",
+    "MaritalStatus",
+    "OverTime",
+    "AgeGroup",
+    "IncomeCategory",
+    "Attrition"
+  ]
+}
