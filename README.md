@@ -2,9 +2,7 @@
 
 A full-stack HR Analytics platform that transforms employee data into actionable insights. This project combines data cleaning, exploratory data analysis, machine learning, and an interactive dashboard to predict employee attrition and support data-driven HR decisions.
 
-![HR Dashboard Preview](assets/dashboard-preview.png)
-
-> **Note:** Dashboard preview image will be added as the UI is implemented.
+![HR Dashboard Preview](Background_HR.png)
 
 ---
 
