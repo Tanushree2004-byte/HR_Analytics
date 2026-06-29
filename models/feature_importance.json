@@ -1,0 +1,22 @@
+{
+  "JobRole_Research Director": 1.5036,
+  "JobRole_Laboratory Technician": 1.2833,
+  "JobRole_Sales Representative": 1.1419,
+  "EducationField_Other": 0.8418,
+  "EducationField_Human Resources": 0.788,
+  "JobRole_Healthcare Representative": 0.6453,
+  "BusinessTravel_Non-Travel": 0.6138,
+  "LowStockOptions": 0.5879,
+  "JobLevel": 0.5795,
+  "HighOvertime": 0.5323,
+  "YearsWithCurrManager": 0.5116,
+  "TotalWorkingYears": 0.4824,
+  "NumCompaniesWorked": 0.4727,
+  "Department_Sales": 0.4517,
+  "JobRole_Human Resources": 0.4513,
+  "HighTravel": 0.4197,
+  "BusinessTravel_Travel_Rarely": 0.4166,
+  "EducationField_Technical Degree": 0.4008,
+  "JobRole_Manager": 0.3659,
+  "YearsSinceLastPromotion": 0.316
+}
