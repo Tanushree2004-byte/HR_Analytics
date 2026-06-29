@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prediction | HR Intelligence Platform</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/dark-mode.css">
+</head>
+<body>
+  <div class="loading-overlay" id="loadingOverlay"><div class="spinner"></div></div>
+  <div class="app-layout">
+    <aside class="sidebar" id="sidebar"></aside>
+    <div class="main-content">
+      <header class="topbar" id="topbar"></header>
+      <main class="page-content">
+        <div class="prediction-layout">
+          <div class="form-card">
+            <h3 style="margin-bottom:24px">Employee Attrition Prediction</h3>
+            <form id="predictionForm">
+              <div class="form-grid">
+                <div class="form-group"><label>Age</label><input type="number" name="Age" value="35" min="18" max="65" required></div>
+                <div class="form-group"><label>Gender</label><select name="Gender"><option>Male</option><option>Female</option></select></div>
+                <div class="form-group"><label>Department</label><select name="Department"><option>Research & Development</option><option>Sales</option><option>Human Resources</option></select></div>
+                <div class="form-group"><label>Job Role</label><select name="JobRole"><option>Research Scientist</option><option>Sales Executive</option><option>Laboratory Technician</option><option>Manufacturing Director</option><option>Healthcare Representative</option><option>Manager</option><option>Sales Representative</option><option>Research Director</option><option>Human Resources</option></select></div>
+                <div class="form-group"><label>Monthly Income ($)</label><input type="number" name="MonthlyIncome" value="5000" min="1000" max="20000"></div>
+                <div class="form-group"><label>Business Travel</label><select name="BusinessTravel"><option>Travel_Rarely</option><option>Travel_Frequently</option><option>Non-Travel</option></select></div>
+                <div class="form-group"><label>Marital Status</label><select name="MaritalStatus"><option>Married</option><option>Single</option><option>Divorced</option></select></div>
+                <div class="form-group"><label>Education Level</label><select name="Education"><option value="1">Below College</option><option value="2">College</option><option value="3" selected>Bachelor</option><option value="4">Master</option><option value="5">Doctor</option></select></div>
+                <div class="form-group"><label>Education Field</label><select name="EducationField"><option>Life Sciences</option><option>Medical</option><option>Marketing</option><option>Technical Degree</option><option>Other</option><option>Human Resources</option></select></div>
+                <div class="form-group"><label>Job Level</label><input type="number" name="JobLevel" value="2" min="1" max="5"></div>
+                <div class="form-group"><label>Job Involvement</label><input type="number" name="JobInvolvement" value="3" min="1" max="4"></div>
+                <div class="form-group"><label>Job Satisfaction</label><input type="number" name="JobSatisfaction" value="3" min="1" max="4"></div>
+                <div class="form-group"><label>Environment Satisfaction</label><input type="number" name="EnvironmentSatisfaction" value="3" min="1" max="4"></div>
+                <div class="form-group"><label>Relationship Satisfaction</label><input type="number" name="RelationshipSatisfaction" value="3" min="1" max="4"></div>
+                <div class="form-group"><label>Work Life Balance</label><input type="number" name="WorkLifeBalance" value="3" min="1" max="4"></div>
+                <div class="form-group"><label>Performance Rating</label><input type="number" name="PerformanceRating" value="3" min="1" max="4"></div>
+                <div class="form-group"><label>OverTime</label><select name="OverTime"><option value="No">No</option><option value="Yes">Yes</option></select></div>
+                <div class="form-group"><label>Distance From Home</label><input type="number" name="DistanceFromHome" value="5" min="1" max="30"></div>
+                <div class="form-group"><label>Total Working Years</label><input type="number" name="TotalWorkingYears" value="10" min="0" max="40"></div>
+                <div class="form-group"><label>Years At Company</label><input type="number" name="YearsAtCompany" value="5" min="0" max="40"></div>
+                <div class="form-group"><label>Years In Current Role</label><input type="number" name="YearsInCurrentRole" value="3" min="0" max="20"></div>
+                <div class="form-group"><label>Years Since Last Promotion</label><input type="number" name="YearsSinceLastPromotion" value="1" min="0" max="15"></div>
+                <div class="form-group"><label>Years With Current Manager</label><input type="number" name="YearsWithCurrManager" value="3" min="0" max="15"></div>
+                <div class="form-group"><label>Num Companies Worked</label><input type="number" name="NumCompaniesWorked" value="2" min="0" max="10"></div>
+                <div class="form-group"><label>Stock Option Level</label><input type="number" name="StockOptionLevel" value="1" min="0" max="3"></div>
+                <div class="form-group"><label>Percent Salary Hike</label><input type="number" name="PercentSalaryHike" value="15" min="0" max="50"></div>
+                <div class="form-group"><label>Training Times Last Year</label><input type="number" name="TrainingTimesLastYear" value="2" min="0" max="6"></div>
+                <div class="form-group"><label>Daily Rate</label><input type="number" name="DailyRate" value="800" min="100" max="1500"></div>
+                <div class="form-group"><label>Hourly Rate</label><input type="number" name="HourlyRate" value="65" min="30" max="100"></div>
+                <div class="form-group"><label>Monthly Rate</label><input type="number" name="MonthlyRate" value="20000" min="2000" max="28000"></div>
+              </div>
+              <button type="submit" class="btn btn-primary" style="margin-top:24px;width:100%">🎯 Predict Attrition Risk</button>
+            </form>
+          </div>
+          <div class="result-card" id="resultPanel" style="display:none">
+            <p style="text-align:center;color:var(--text-muted);padding:40px">Submit the form to see prediction results</p>
+          </div>
+        </div>
+        <footer class="footer"><p>© 2026 HR Intelligence Platform</p></footer>
+      </main>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/prediction.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employees | HR Intelligence Platform</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/dark-mode.css">
+</head>
+<body>
+  <div class="loading-overlay" id="loadingOverlay"><div class="spinner"></div></div>
+  <div class="app-layout">
+    <aside class="sidebar" id="sidebar"></aside>
+    <div class="main-content">
+      <header class="topbar" id="topbar"></header>
+      <main class="page-content">
+        <div class="filters-bar">
+          <div class="filter-group">
+            <label>Search</label>
+            <input type="text" id="empSearch" placeholder="Search employees...">
+          </div>
+          <div class="filter-group">
+            <label>Department</label>
+            <select id="deptFilter">
+              <option value="">All Departments</option>
+              <option value="Sales">Sales</option>
+              <option value="Research & Development">Research & Development</option>
+              <option value="Human Resources">Human Resources</option>
+            </select>
+          </div>
+          <div class="filter-group" style="align-self:flex-end">
+            <button class="btn btn-primary" id="exportBtn">📥 Export CSV</button>
+          </div>
+        </div>
+
+        <div class="table-card">
+          <div class="table-header">
+            <h3>Employee Directory</h3>
+            <span id="totalCount" style="color:var(--text-muted)"></span>
+          </div>
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th data-sort="EmployeeNumber">ID ↕</th>
+                  <th data-sort="Age">Age ↕</th>
+                  <th data-sort="Gender">Gender ↕</th>
+                  <th data-sort="Department">Department ↕</th>
+                  <th data-sort="JobRole">Job Role ↕</th>
+                  <th data-sort="MonthlyIncome">Salary ↕</th>
+                  <th data-sort="YearsAtCompany">Tenure ↕</th>
+                  <th data-sort="OverTime">Overtime ↕</th>
+                  <th>Satisfaction</th>
+                  <th data-sort="Attrition">Attrition ↕</th>
+                </tr>
+              </thead>
+              <tbody id="employeeTableBody"></tbody>
+            </table>
+          </div>
+          <div class="pagination" id="pagination"></div>
+        </div>
+        <footer class="footer"><p>© 2026 HR Intelligence Platform</p></footer>
+      </main>
+    </div>
+  </div>
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/employees.js"></script>
+</body>
+</html>
