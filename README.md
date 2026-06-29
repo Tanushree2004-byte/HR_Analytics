@@ -1,35 +1,42 @@
-# HR Analytics — Employee Attrition Prediction & Dashboard
+# HR Intelligence Platform — Employee Attrition Prediction & Workforce Analytics
 
-A full-stack HR Analytics platform that transforms employee data into actionable insights. This project combines data cleaning, exploratory data analysis, machine learning, and an interactive dashboard to predict employee attrition and support data-driven HR decisions.
+A production-ready enterprise HR Analytics web application that transforms IBM HR workforce data into actionable insights. Combines data cleaning, EDA, machine learning, REST APIs, and an interactive golden-themed dashboard.
 
-![HR Dashboard Preview](Background_HR.png)
+![Dashboard Preview](Background_HR.png)
+
+**Live Demo:** Frontend on Vercel | Backend on Render (configure after deployment)
+
+**Repository:** [github.com/Tanushree2004-byte/HR_Analytics](https://github.com/Tanushree2004-byte/HR_Analytics)
 
 ---
 
 ## Project Overview
 
-Organizations lose talent and institutional knowledge when employees leave unexpectedly. This project analyzes HR workforce data to identify attrition patterns, build predictive models, and deliver an interactive dashboard for HR teams.
+Organizations lose talent and institutional knowledge when employees leave unexpectedly. This platform analyzes HR workforce data to identify attrition patterns, build predictive models, and deliver an interactive dashboard for HR teams.
 
-The workflow covers the complete data science lifecycle:
-
-1. **Data ingestion & cleaning** — Load and preprocess the IBM HR Employee Attrition dataset
-2. **Exploratory data analysis (EDA)** — Uncover trends in demographics, compensation, and satisfaction
-3. **Machine learning** — Train and evaluate classification models for attrition prediction
-4. **API layer** — Expose predictions via a Flask REST API
-5. **Dashboard UI** — Visualize KPIs, trends, and individual employee risk scores
+**Complete workflow:**
+1. Data ingestion & professional cleaning
+2. Exploratory data analysis with 23+ visualizations
+3. Multi-model ML training & comparison
+4. Flask REST API layer
+5. Enterprise dashboard UI with prediction & reports
 
 ---
 
 ## Features
 
-| Module | Status | Description |
-|--------|--------|-------------|
-| Data Cleaning | Planned | Handle missing values, encode categoricals, feature engineering |
-| EDA & Reports | Planned | Statistical summaries, visualizations, insight reports |
-| ML Models | Planned | Logistic Regression, Random Forest, and model comparison |
-| Prediction API | Planned | Flask endpoints for single and batch predictions |
-| HR Dashboard | Planned | Interactive charts, KPIs, employee lookup |
-| Deployment | Planned | Production-ready configuration |
+| Module | Status | Highlights |
+|--------|--------|------------|
+| Data Cleaning | ✅ Complete | Missing values, outliers, encoding, scaling, feature engineering |
+| EDA & Reports | ✅ Complete | 23 charts, business insights, correlation & heatmap analysis |
+| ML Models | ✅ Complete | Logistic Regression, Decision Tree, Random Forest, Gradient Boosting |
+| Prediction API | ✅ Complete | Real-time attrition risk with recommendations |
+| HR Dashboard | ✅ Complete | KPIs, 15+ charts, employee table, filters |
+| Prediction Page | ✅ Complete | HR form, risk gauge, confidence meter |
+| Reports Module | ✅ Complete | PDF, CSV, Excel export + CSV upload + model retraining |
+| Deployment | ✅ Ready | Vercel (frontend) + Render (backend) configs |
+
+**Additional:** Dark mode, animated counters, toast notifications, responsive design, collapsible sidebar, 404 page
 
 ---
 
@@ -37,54 +44,44 @@ The workflow covers the complete data science lifecycle:
 
 | Layer | Stack |
 |-------|-------|
-| **Language** | Python 3.10+ |
-| **Data & ML** | Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn |
-| **Notebooks** | Jupyter Notebook |
-| **Backend** | Flask, Flask-CORS |
-| **Frontend** | HTML, CSS, JavaScript (Chart.js / Plotly) |
-| **Version Control** | Git, GitHub |
-| **Deployment** | TBD (Render / Railway / Docker) |
+| Frontend | HTML5, CSS3, JavaScript (ES6), Chart.js |
+| Backend | Flask, Flask-CORS, Gunicorn |
+| ML | Python, Pandas, NumPy, Scikit-learn, Joblib |
+| Visualization | Matplotlib, Seaborn, Chart.js |
+| Reports | ReportLab (PDF), OpenPyXL (Excel) |
+| Deployment | Vercel, Render |
+| Version Control | Git, GitHub |
 
 ---
 
 ## Dataset Information
 
-**Source:** [IBM HR Analytics Employee Attrition & Performance](https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset)
+**Source:** IBM HR Analytics Employee Attrition & Performance
 
 **File:** `data/HR-Employee-Attrition.csv`
 
 | Property | Value |
 |----------|-------|
-| Records | ~1,470 employees |
+| Records | 1,470 employees |
 | Features | 35 columns |
 | Target | `Attrition` (Yes / No) |
-
-**Key columns:**
-
-- **Demographics:** Age, Gender, MaritalStatus, Education, EducationField
-- **Job details:** Department, JobRole, JobLevel, JobInvolvement, OverTime
-- **Compensation:** MonthlyIncome, HourlyRate, PercentSalaryHike, StockOptionLevel
-- **Satisfaction:** JobSatisfaction, EnvironmentSatisfaction, RelationshipSatisfaction, WorkLifeBalance
-- **Tenure:** YearsAtCompany, YearsInCurrentRole, YearsSinceLastPromotion, TotalWorkingYears
+| Attrition Rate | ~16% |
 
 ---
 
 ## Machine Learning Workflow
 
 ```
-Raw CSV → Data Cleaning → Feature Engineering → Train/Test Split
-    → Model Training (Logistic Regression, Random Forest, etc.)
-    → Evaluation (Accuracy, Precision, Recall, F1, ROC-AUC)
-    → Model Serialization → Flask API → Dashboard
+Raw CSV → Cleaning → Feature Engineering → Train/Test Split (80/20)
+    → Model Training (4 algorithms) → Evaluation → Best Model Selection
+    → Joblib Serialization → Flask API → Dashboard
 ```
 
-**Planned models:**
+**Models trained:** Logistic Regression, Decision Tree, Random Forest, Gradient Boosting
 
-- Logistic Regression (baseline, interpretable)
-- Random Forest Classifier
-- Gradient Boosting (optional)
+**Best model:** Logistic Regression (selected by ROC-AUC)
 
-**Evaluation metrics:** Accuracy, Precision, Recall, F1-Score, Confusion Matrix, ROC-AUC
+**Metrics tracked:** Accuracy, Precision, Recall, F1-Score, ROC-AUC, Confusion Matrix, ROC Curves
 
 ---
 
@@ -92,35 +89,25 @@ Raw CSV → Data Cleaning → Feature Engineering → Train/Test Split
 
 ```
 HR_Analytics/
-├── .gitignore
-├── README.md
-├── requirements.txt
-├── data/
-│   └── HR-Employee-Attrition.csv
-├── notebooks/
-│   ├── 01_data_cleaning.ipynb
-│   ├── 02_eda.ipynb
-│   └── 03_model_training.ipynb
+├── data/                          # Raw & processed datasets
+├── frontend/                      # Dashboard UI (HTML, CSS, JS)
+│   ├── css/                       # Styles + dark mode
+│   └── js/                        # API client, charts, page logic
 ├── src/
-│   ├── data_processing/
-│   │   └── clean_data.py
-│   ├── ml/
-│   │   ├── train.py
-│   │   └── predict.py
-│   └── backend/
-│       └── app.py
-├── frontend/
-│   ├── index.html
-│   ├── css/
-│   └── js/
-├── models/
-│   └── (trained model artifacts — gitignored)
-├── reports/
-│   └── (generated EDA reports and figures)
-├── assets/
-│   └── (dashboard screenshots, images)
-└── deployment/
-    └── (Dockerfile, deployment configs)
+│   ├── backend/                   # Flask REST API
+│   │   ├── app.py
+│   │   └── services/              # Data & report services
+│   ├── data_processing/           # Cleaning & EDA pipelines
+│   └── ml/                        # Training & prediction
+├── models/                        # Trained model artifacts
+├── reports/                       # Cleaning reports, EDA charts, insights
+├── tests/                         # API smoke tests
+├── deployment/                    # Deployment configs
+├── run_pipeline.py                # Run cleaning → EDA → training
+├── render.yaml                    # Render deployment
+├── vercel.json                    # Vercel deployment
+├── Procfile                       # Gunicorn process file
+└── requirements.txt
 ```
 
 ---
@@ -128,121 +115,129 @@ HR_Analytics/
 ## Installation Steps
 
 ### Prerequisites
-
-- Python 3.10 or higher
+- Python 3.10+
 - Git
-- (Optional) Node.js for frontend tooling
 
-### Clone the repository
+### Clone & Setup
 
 ```bash
 git clone https://github.com/Tanushree2004-byte/HR_Analytics.git
 cd HR_Analytics
-```
 
-### Create a virtual environment
-
-```bash
-# Windows
 python -m venv venv
-venv\Scripts\activate
+venv\Scripts\activate        # Windows
+# source venv/bin/activate     # macOS/Linux
 
-# macOS / Linux
-python3 -m venv venv
-source venv/bin/activate
-```
-
-### Install dependencies
-
-```bash
 pip install -r requirements.txt
 ```
+
+### Run Data Pipeline
+
+```bash
+python run_pipeline.py
+```
+
+This executes: data cleaning → EDA chart generation → ML model training.
 
 ---
 
 ## Running the Project Locally
 
-> Steps will be updated as modules are implemented.
-
-### 1. Data pipeline & notebooks
+### Start Backend (serves API + frontend)
 
 ```bash
-jupyter notebook notebooks/
-```
-
-### 2. Start the Flask backend
-
-```bash
+set PYTHONPATH=.          # Windows
+# export PYTHONPATH=.     # macOS/Linux
 python src/backend/app.py
 ```
 
-### 3. Open the dashboard
+Open **http://localhost:5000** in your browser.
 
-Open `frontend/index.html` in a browser, or serve via Flask static files at `http://localhost:5000`.
+### Run Tests
+
+```bash
+python tests/test_api.py
+```
 
 ---
 
 ## Deployment Instructions
 
-> Deployment configuration will be added in the final phase.
+### Backend → Render
 
-Planned options:
+1. Connect GitHub repo to [Render](https://render.com)
+2. Use `render.yaml` blueprint or manual setup:
+   - **Build:** `pip install -r requirements.txt && python run_pipeline.py`
+   - **Start:** `gunicorn src.backend.app:app --bind 0.0.0.0:$PORT`
+3. Set env vars: `CORS_ORIGINS=https://your-vercel-app.vercel.app`
 
-- **Render / Railway** — Deploy Flask API + static frontend
-- **Docker** — Containerized deployment via `deployment/Dockerfile`
+### Frontend → Vercel
+
+1. Import repo to [Vercel](https://vercel.com)
+2. Root directory: project root (uses `vercel.json`)
+3. Update API proxy URL in `vercel.json` to your Render backend URL
+4. Or set `hr-api-url` in Settings page after deployment
 
 ---
 
 ## API Endpoints
 
-> Endpoints will be documented here once the Flask backend is implemented.
-
 | Method | Endpoint | Description |
 |--------|----------|-------------|
 | `GET` | `/api/health` | Health check |
-| `POST` | `/api/predict` | Predict attrition for a single employee |
-| `POST` | `/api/predict/batch` | Batch predictions |
-| `GET` | `/api/stats` | Aggregate HR statistics |
+| `GET` | `/api/dashboard` | KPIs, charts, departments, jobs |
+| `POST` | `/api/predict` | Predict employee attrition |
+| `GET` | `/api/employees` | Paginated employee list (search, filter, sort) |
+| `GET` | `/api/model-metrics` | ML model comparison metrics |
+| `GET` | `/api/insights` | EDA business insights |
+| `GET` | `/api/departments` | Department analytics |
+| `GET` | `/api/jobs` | Job role analytics |
+| `POST` | `/api/upload` | Upload new CSV dataset |
+| `POST` | `/api/retrain` | Retrain ML model |
+| `GET` | `/api/download-report?format=pdf\|csv\|excel` | Export reports |
+
+---
+
+## Dashboard Pages
+
+| Page | URL | Description |
+|------|-----|---------------|
+| Dashboard | `/` | KPIs, charts, insights, employee preview |
+| Employees | `/employees.html` | Searchable, sortable, paginated table |
+| Departments | `/departments.html` | Department-level analytics |
+| Jobs | `/jobs.html` | Job role analytics |
+| Analytics | `/analytics.html` | Deep analytics + all insights |
+| Prediction | `/prediction.html` | ML attrition prediction form |
+| Reports | `/reports.html` | PDF/CSV/Excel export, upload, retrain |
+| Settings | `/settings.html` | Theme, API config |
+| Support | `/support.html` | Help documentation |
 
 ---
 
 ## Future Enhancements
 
-- [ ] SHAP / LIME model explainability
-- [ ] Real-time data pipeline integration
-- [ ] User authentication and role-based access
-- [ ] Email alerts for high-risk attrition employees
-- [ ] Power BI / Tableau export integration
-- [ ] A/B testing for retention strategies
-- [ ] Multi-dataset support
+- [ ] SHAP/LIME model explainability
+- [ ] Real-time HRIS integration
+- [ ] User authentication & RBAC
+- [ ] Email alerts for high-risk employees
+- [ ] Power BI embedded dashboards
+- [ ] Docker containerization
 
 ---
 
 ## License
 
-This project is open source and available under the [MIT License](LICENSE).
+MIT License — see [LICENSE](LICENSE)
 
 ---
 
-## Author Information
+## Author
 
 **Tanushree**
 
 - GitHub: [@Tanushree2004-byte](https://github.com/Tanushree2004-byte)
-- Repository: [HR_Analytics](https://github.com/Tanushree2004-byte/HR_Analytics)
+- Project: [HR_Analytics](https://github.com/Tanushree2004-byte/HR_Analytics)
 
 ---
 
-## Git Workflow
-
-This repository follows milestone-based commits:
-
-- `Initial Project Structure`
-- `Added Data Cleaning Module`
-- `Completed Exploratory Data Analysis`
-- `Implemented Machine Learning Models`
-- `Added Attrition Prediction API`
-- `Designed HR Dashboard UI`
-- `Final Deployment Ready Version`
-
-Each major module is committed and pushed to keep a clean, professional Git history.
+*Built as a production-quality Data Analytics portfolio project for Data Analyst and Business Intelligence roles.*
